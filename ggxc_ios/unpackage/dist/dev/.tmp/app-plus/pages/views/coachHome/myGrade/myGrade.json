@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "我的排班",
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "wuc-tab": "/components/wuc-tab/wuc-tab"
+  }
 }

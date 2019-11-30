@@ -298,7 +298,8 @@
 		align-items: center;
 		padding: 0 16upx;
 		box-sizing: border-box;
-		box-shadow: 0 0 5upx 4upx rgba(0,0,0,0.1);
+		/* box-shadow: 0 0 5upx 4upx rgba(0,0,0,0.1); */
+		box-shadow: 0 4upx 30upx #ebedf0;
 	}
 	.coach-header view:nth-child(2){
 		font-size: 36upx;
