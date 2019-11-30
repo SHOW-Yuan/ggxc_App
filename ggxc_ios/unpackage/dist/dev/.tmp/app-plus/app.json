@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/views/Login",
+    "pages/views/coachHome/coachHome",
+    "pages/views/coachHome/myGrade/myGrade",
+    "pages/views/coachHome/carMaintain/carMaintain",
+    "pages/views/coachHome/carFuel/reful/reful",
+    "pages/views/coachHome/carFuel/carFuel",
+    "pages/views/coachHome/carMaintain/service/service",
+    "pages/views/coachHome/examAudit/examAudit"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "nvueCompiler": "weex",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "ggxc_Ios",
+  "compilerVersion": "2.2.2",
+  "usingComponents": {}
+}
