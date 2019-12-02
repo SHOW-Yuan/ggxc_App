@@ -1,14 +1,15 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/views/coachHome/coachHome",
+			"style": {"navigationStyle":"custom"}
+		},
+		{
 			"path": "pages/views/Login",
 			"style": {"navigationStyle":"custom"}
 		},
 		// 教练区域
-		{
-			"path": "pages/views/coachHome/coachHome",
-			"style": {"navigationStyle":"custom"}
-		},
+		
 		{
 			"path": "pages/views/coachHome/myGrade/myGrade",
 			"style": {
@@ -20,7 +21,8 @@
 			"path": "pages/views/coachHome/carMaintain/carMaintain",
 			"style": {
 				"navigationBarTitleText": "维修记录",
-				"navigationBarBackgroundColor":"#F8F8F8"
+				"navigationBarBackgroundColor":"#F8F8F8",
+				"enablePullDownRefresh":true//开启下拉刷新
 			}
 		},
 		{
@@ -32,13 +34,14 @@
 		{
 			"path": "pages/views/coachHome/carFuel/carFuel",
 			"style": {
-				"navigationBarTitleText": "燃料管理"
+				"navigationBarTitleText": "加油记录"
 			}
 		},
 		{
 			"path": "pages/views/coachHome/carMaintain/service/service",
 			"style": {
-				"navigationBarTitleText": "组件"
+				"navigationBarTitleText": "维修表单",
+				"navigationBarBackgroundColor":"#F8F8F8"
 			}
 		},
 		{

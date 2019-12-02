@@ -1,4 +1,8 @@
 {
-  "navigationBarTitleText": "组件",
-  "usingComponents": {}
+  "navigationBarTitleText": "维修表单",
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "xfl-select": "/components/xfl-select/xfl-select",
+    "uni-calendar": "/components/uni-calendar/uni-calendar"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/views/Login",
     "pages/views/coachHome/coachHome",
+    "pages/views/Login",
     "pages/views/coachHome/myGrade/myGrade",
     "pages/views/coachHome/carMaintain/carMaintain",
     "pages/views/coachHome/carFuel/reful/reful",

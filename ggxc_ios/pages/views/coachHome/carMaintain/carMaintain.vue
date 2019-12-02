@@ -2,7 +2,7 @@
 	<view class="box">
 		<!-- 日期区域 -->
 		<view class="header-date">
-			<view>添加</view>
+			<view @click="goBack()">添加</view>
 			<view>
 				<text @click="shangyue">上一月</text>
 				<text>{{ynow}}-{{mnow}}</text>
@@ -89,6 +89,7 @@
 					data:JSON.stringify(this.formData),
 					success: (res) => {
 						let { data: { code, datas, msg } } = res;
+						uni.stopPullDownRefresh();
 						if(code!==200){
 							uni.showToast({
 								title: msg,
@@ -157,13 +158,23 @@
 			  console.log(this.formData.datas[0].date)
 			  this.loadData();
 			},
+			// 监听下拉刷新
+			onPullDownRefresh() {
+				this.loadData();
+			},
+			// 前往添加页面
+			goBack(){
+				uni.navigateTo({
+				    url: '/pages/views/coachHome/carMaintain/service/service'
+				});
+			}
 		}
 	}
 </script>
 
 <style>
 	page{
-		background-color: #F8F8F8;
+		background-color: #FFFFFF;
 	}
 	.box {
 		padding: 0 30upx;
@@ -176,7 +187,6 @@
 		align-items: center;
 		justify-content: space-between;
 		font-size: 24upx;
-		border-radius: 20upx;
 		border-bottom: 2upx solid #eee;
 	}
 	.header-date view:nth-child(1) {
@@ -192,13 +202,14 @@
 		flex: 1;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		background-color: #ECECEC;
 		padding: 20upx;
 		color: #000000;
 	}
 	.header-date view:nth-child(2) text:nth-child(odd) {
 		background-color: rgb(4, 190, 158);
-		padding: 4upx 16upx;
+		padding: 8upx 24upx;
 		color: #FFFFFF;
 	}
 	.header-date view:nth-child(2) text:nth-child(even) {
