@@ -85,7 +85,6 @@ page{
 	width: 100%;
 	text-align: center;
 	font-size: 32rpx;
-	margin-bottom: 30rpx;
 }
 .date-list {
 	display: -webkit-box;
@@ -96,6 +95,7 @@ page{
 	-webkit-justify-content: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	padding-top: 30rpx;
 }
 .date-list>view {
 	-webkit-box-flex: 1;

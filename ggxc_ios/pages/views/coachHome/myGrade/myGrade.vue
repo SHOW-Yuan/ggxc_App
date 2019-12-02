@@ -254,11 +254,11 @@
 		width: 100%;
 		text-align: center;
 		font-size: 32upx;
-		margin-bottom: 30upx;
 	}
 	.date-list {
 		display: flex;
 		justify-content: center;
+		padding-top: 30upx;
 	}
 	.date-list>view {
 		flex: 1;

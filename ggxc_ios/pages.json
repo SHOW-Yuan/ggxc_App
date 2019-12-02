@@ -19,7 +19,8 @@
 		{
 			"path": "pages/views/coachHome/carMaintain/carMaintain",
 			"style": {
-				"navigationBarTitleText": "车辆维修"
+				"navigationBarTitleText": "维修记录",
+				"navigationBarBackgroundColor":"#F8F8F8"
 			}
 		},
 		{
@@ -43,7 +44,8 @@
 		{
 			"path": "pages/views/coachHome/examAudit/examAudit",
 			"style": {
-				"navigationBarTitleText": "代考审批"
+				"navigationBarTitleText": "代考审批",
+				"navigationBarBackgroundColor":"#F8F8F8"
 			}
 		}
 	],

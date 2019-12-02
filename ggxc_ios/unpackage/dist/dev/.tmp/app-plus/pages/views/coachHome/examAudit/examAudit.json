@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "代考审批",
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "neil-modal": "/components/neil-modal/neil-modal"
+  }
 }

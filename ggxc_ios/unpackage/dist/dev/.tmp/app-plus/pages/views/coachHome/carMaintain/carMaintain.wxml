@@ -1,1 +1,1 @@
-<view>车辆维修</view>
+<view class="box"><view class="header-date"><view>添加</view><view><text>上一月</text><text>2018-11</text><text>下一月</text></view></view><view class="list-box"><block wx:for="{{listDatas}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block><view class="item-box"><view class="item-box-one"><view><text>{{item.cphm}}</text><text>车牌号</text></view><view><text>{{item.Money+"￥"}}</text><text>维修费</text></view></view><view class="item-box-two"><text>{{item.part}}</text><text>{{item.bxdate}}</text></view></view></block></block></view></view>
