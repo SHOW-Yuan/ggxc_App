@@ -1,9 +1,18 @@
 <template>
 	<view class="box">
 		<view class="form-box">
-			<view>
+			<view class="carHao">
 				<text>车牌号：</text>
-				<input type="text" value="" placeholder="请输入车牌号"/>
+				<input type="text" v-model.trim="con" placeholder="请输入车牌号"/>
+				<view class="sos-box" ref='singleDom' v-show="flag">
+					<ul class="soso">
+					  <block v-for="(item, index) in items" :key="index">
+						  <li @click="gotoItem(item)">
+							  {{item.cphm}}
+						  </li>
+					  </block>
+					</ul>
+				</view>
 			</view>
 			<view>
 				<text>教练名称：</text>
@@ -11,7 +20,7 @@
 			</view>
 			<view>
 				<text>报修金额：</text>
-				<input type="text" v-model.lazy="formData.datas[0].money"  placeholder="请输入报修金额"/>
+				<input type="number" v-model.lazy="formData.datas[0].money"  placeholder="请输入报修金额"/>
 			</view>
 			<view>
 				<text>报修部件：</text>
@@ -21,7 +30,6 @@
 				<text>是否维修：</text>
 				<view style="width: 74%; margin: auto;">
 					<xfl-select 
-					v-model="formData.datas[0].wxstate"
 					:list="list"
 					:initValue="'待维修'"
 					:isCanInput="false"  
@@ -41,7 +49,7 @@
 					:insert="false"
 					@confirm="confirm"
 					 ></uni-calendar>
-					 <text @click="open">{{isCalendar ? '打开日历' : calendarDate}}</text>
+					 <text class="dakai" @click="open">{{isCalendar ? '打开日历' : calendarDate}}</text>
 				</view>
 			</view>
 			<view class="lash">
@@ -96,6 +104,9 @@
 				    }
 				  ]
 				},
+				carList:[],
+				con:'',
+				flag:false
 				
 			}
 		},
@@ -111,6 +122,7 @@
 			//接口 car
 			this.formData02.datas[0].uid = this.datas[0].uid;
 			this.formData02.datas[0].schoolcode = this.datas[0].userapps[0].schoolcode;
+			this.carShow()
 		},
 		methods:{
 			// 选择框发生变化时
@@ -126,13 +138,90 @@
 				this.calendarDate = e.fulldate
 				this.formData.datas[0].date = e.fulldate
 				this.isCalendar = false
-				console.log(this.calendarDate);
 			},
 			// 提交
 			service(){
-				console.log(this.formData)
+				if (this.formData.datas[0].cphm === "") {
+				  uni.showToast({title: "车牌号不能为空",icon:'none'})
+				  return;
+				} else if (this.formData.datas[0].coach === "") {
+				  uni.showToast({title: "教练姓名不能为空",icon:'none'})
+				  return;
+				} else if (this.formData.datas[0].money === "") {
+				  uni.showToast({title: "报修金额不能为空",icon:'none'})
+				  return;
+				} else if (this.formData.datas[0].part === "") {
+				  uni.showToast({title: "更换部件不能为空",icon:'none'})
+				  return;
+				} else if (this.formData.datas[0].date === "") {
+				  uni.showToast({title: "报修时间不能为空",icon:'none'})
+				  return;
+				}	else if (this.formData.datas[0].wxyy === "") {
+				  uni.showToast({title: "报修原因不能为空",icon:'none'})
+				  return;
+				}
+				uni.request({
+					url:this.$ip.url.ip1 + '/app/menmian-area/4QAAAAEBAB4/add_vehicleRepair',
+					method:'post',
+					data:JSON.stringify(this.formData),
+					success: (res) => {
+						let { data: { code, datas, msg } } = res;
+						if(code!==200){
+							uni.showToast({title: msg,icon:'none'})
+							return;
+						}
+						uni.showToast({title: '提交成功',icon:'none'})
+						uni.redirectTo({
+							url:'/pages/views/coachHome/carMaintain/carMaintain'
+						})
+					}
+				})
+				
+			},
+			// 获取车牌信息
+			carShow(){
+				uni.request({
+					url:this.$ip.url.ip1 + "/app/menmian-area/4QAAAAEBAB4/car",
+					method:'post',
+					data:JSON.stringify(this.formData02),
+					success: (res) => {
+						let { data: { code, datas, msg } } = res;
+						if(code==200){
+							this.carList = datas
+							console.log(this.carList)
+						}
+					}
+				})
+			},
+			// 选择车牌号
+			gotoItem(item) {
+				var self = this;
+				this.formData.datas[0].cphm = item.cphm;
+				this.con = item.cphm;
+				this.formData.datas[0].carnumber = item.carnumber;
+				console.log(this.con);
+				this.$nextTick(function () {
+					self.flag = false
+				})
+			},
+		},
+		computed: {
+			//过滤方法
+			items() {
+				if (this.con == '') {
+					return;
+				}
+				return this.carList.filter(value => value.cphm.indexOf(this.con) !== -1)
 			}
-			
+		},
+		watch: {
+			con:function(val){
+				if(val){
+					this.flag=true;
+				}else{
+					this.flag=false;
+				}
+			},
 		}
 	}
 </script>
@@ -156,7 +245,8 @@
 	.form-box>view text {
 		flex: 1;
 	}
-	.form-box>view input {
+	.form-box>view input,
+	.form-box>view .dakai{
 		width: 74%;
 		font-size: 28upx;
 	}
@@ -182,5 +272,51 @@
 		background-color: #00BB99;
 		/* border-radius: 60upx; */
 		color: #FFFFFF;
+	}
+	/* 搜搜 */
+	.carHao {
+		position: relative;
+	}
+	.carHao .sos-box {
+		position: absolute;
+		left: 50%;
+		top: 120upx;
+		transform: translate(-50%);
+		background: #fff;
+		font-size: 28upx;
+		text-align: center;
+		border-radius: 10upx;
+		border: 1px solid #dcdfe6;
+		box-shadow: 0 4upx 24upx 0 rgba(0, 0, 0, 0.1);
+		padding: 10upx 0;
+		width: 50%;
+		z-index: 99;
+	}
+	.carHao .sos-box::before {
+		content: '';
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		transform: rotate(45deg);
+		top: -6px;
+		left: 20%;
+		background: #fff;
+		z-index: 99999999999;
+	}
+	.carHao .soso{
+		padding: 0;
+		list-style: none;
+		max-height: 300px;
+		overflow: scroll;
+	}
+	.carHao .soso>li{
+	   color: #00BB99;
+	   font-weight: 700;
+	   padding:20upx 0;
+	}	
+	.carHao .soso>li:hover{
+	  background:#ECECEC;
 	}
 </style>
