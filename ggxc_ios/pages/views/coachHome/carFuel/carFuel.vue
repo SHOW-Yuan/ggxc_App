@@ -2,7 +2,7 @@
 	<view>
 	<view class="f-head">
 		<view class="f-but">
-			<button>添加</button>
+			<button @click="goBack()">添加</button>
 		</view>
 		<view class="f-rig">
 			<view class="rig-box">
@@ -68,7 +68,8 @@
 		      listDatas: [],
 		    }
 		  },
-		created() {
+		  
+			created() {
 		
 		    //日历
 		    this.newDate = new Date();
@@ -80,15 +81,32 @@
 		      this.mnow = "0" + `${this.mnow}`;
 		    }
 		    this.date1 = `${this.ynow}-${this.mnow}`;
-		
 		    this.datas = JSON.parse(uni.getStorageSync('datas'));
 		    this.defaultValueData = this.formData.datas[0].date.split("-");
 		    this.formData.datas[0].uid = this.datas[0].uid;
 		    this.formData.datas[0].schoolcode = this.datas[0].userapps[0].schoolcode;
 		    this.formData.datas[0].coach_id = this.datas[0].id;
+			this.formData.datas[0].date=this.date1;
+			uni.request({
+				url:this.$ip.url.ip1 + "/app/menmian-area/4QAAAAEBAB4/CoachFuelReport",
+				method:'post',
+				data:JSON.stringify(this.formData),
+				success: (res) => {
+					let { data: { code, datas, msg } } = res;
+					uni.stopPullDownRefresh();
+					if(code!==200){
+						uni.showToast({
+							title: msg,
+							icon:'none'
+						})
+						this.listDatas = [];
+						return;
+					}
+					this.listDatas = datas;
+				}
+			})
 		  },
 		  methods: {
-		  
 		      //上一月  下一月
 		      shangyue() {
 		        var date2 = `${this.ynow}-${this.mnow}`; //会变化的日期
@@ -112,27 +130,7 @@
 		        }
 				this.box1=false;
 		        this.formData.datas[0].date = date2;
-				uni.request({
-					url:this.$ip.url.ip1 + "/app/menmian-area/4QAAAAEBAB4/CoachFuelReport",
-					method:'post',
-					data:JSON.stringify(this.formData),
-					success: (res) => {
-					var {data: {code, datas, msg}} = res;
-					if(code!= 200){
-						uni.showToast({
-							title: msg,
-							icon:'none'
-						})
-						this.listDatas=[];
-						return;
-					}
-					  if (code === 200) {
-						this.listDatas = datas;
-					  }else {
-						this.listDatas = [];
-					  }
-					}
-				})
+				
 		      },
 		      xiayue() {
 		        var date2 = `${this.ynow}-${this.mnow}`; //会变化的日期
@@ -181,17 +179,18 @@
 					}
 				})
 		      },
-		  
-		      switchPicker(param) {
-		        this[`${param}`] = !this[`${param}`];
-		      },
-		      async setChooseValue0(chooseData) {
-		        this.formData.datas[0].date = `${chooseData[0]}-${chooseData[1]}`;
-		        this.loadData();
-		      },
-		      service(){
-		          this.$router.push('/reful');
-		      },
+			onPullDownRefresh() {
+				this.loadData();
+			},
+			// 前往添加页面
+				goBack(){
+					uni.navigateTo({
+						url: '/pages/views/coachHome/carFuel/reful/reful'
+					});
+				},
+				switchPicker(param) {
+					this[`${param}`] = !this[`${param}`];
+				}
 		    }
 		}	
 </script>
@@ -273,7 +272,7 @@
 		height:160upx;
 		background: #ffffff;
 		box-sizing: border-box;
-		padding:0 80upx;
+		padding:0 30upx;
 	}
 	.refuel-bottom{
 		width:100%;
