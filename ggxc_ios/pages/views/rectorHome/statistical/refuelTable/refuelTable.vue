@@ -22,6 +22,7 @@
 			</view>
 		</view>
 		
+		
 		<!-- 表格 -->
 		<view class="my-table" v-if="(gasoline.length > 1)">
 			<z-table :tableData='gasoline' :columns='baseColumns' stickSide @onClick='rowClick'></z-table>

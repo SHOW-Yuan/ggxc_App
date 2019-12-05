@@ -34,6 +34,7 @@
 			</block>
 		</view>
 		
+		
 		<neil-modal
 		    :show="show" 
 		    @close="show = false" 

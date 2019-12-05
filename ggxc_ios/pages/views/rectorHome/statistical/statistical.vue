@@ -35,6 +35,7 @@
 		    @confirm="bindBtn('confirm')">
 		</neil-modal>
 		
+		
 	</view>
 </template>
 

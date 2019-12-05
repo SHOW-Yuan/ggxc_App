@@ -1,4 +1,5 @@
 <template>
+	<view></view>
 </template>
 
 <script>
@@ -6,3 +7,4 @@
 
 <style>
 </style>
+
