@@ -6,109 +6,11 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "32305",
-      "name": "right",
-      "font_class": "right",
-      "unicode": "e6a3",
-      "unicode_decimal": 59043
-    },
-    {
-      "icon_id": "3868269",
-      "name": "技术服务",
-      "font_class": "jishufuwu",
-      "unicode": "eb64",
-      "unicode_decimal": 60260
-    },
-    {
-      "icon_id": "3868276",
-      "name": "使用文档",
-      "font_class": "shiyongwendang",
-      "unicode": "eb66",
-      "unicode_decimal": 60262
-    },
-    {
-      "icon_id": "4354245",
-      "name": "工业组件-仪表盘",
-      "font_class": "gongyezujian-yibiaopan",
-      "unicode": "eb94",
-      "unicode_decimal": 60308
-    },
-    {
-      "icon_id": "4354246",
-      "name": "图表-卡片",
-      "font_class": "tubiao-qiapian",
-      "unicode": "eb95",
-      "unicode_decimal": 60309
-    },
-    {
-      "icon_id": "4354248",
-      "name": "图表-折线图",
-      "font_class": "tubiao-zhexiantu",
-      "unicode": "eb96",
-      "unicode_decimal": 60310
-    },
-    {
-      "icon_id": "4354252",
-      "name": "图表-柱状图",
-      "font_class": "tubiao-zhuzhuangtu",
-      "unicode": "eb97",
-      "unicode_decimal": 60311
-    },
-    {
-      "icon_id": "4779612",
-      "name": "表单组件-表格",
-      "font_class": "biaodanzujian-biaoge",
-      "unicode": "ec15",
-      "unicode_decimal": 60437
-    },
-    {
       "icon_id": "4936678",
       "name": "phone-fill",
       "font_class": "phone-fill",
       "unicode": "e86d",
       "unicode_decimal": 59501
-    },
-    {
-      "icon_id": "5769243",
-      "name": "工单",
-      "font_class": "gongdan",
-      "unicode": "ec37",
-      "unicode_decimal": 60471
-    },
-    {
-      "icon_id": "5961300",
-      "name": "待办事项",
-      "font_class": "daibanshixiang",
-      "unicode": "ec4e",
-      "unicode_decimal": 60494
-    },
-    {
-      "icon_id": "6337498",
-      "name": "编辑",
-      "font_class": "tianxie",
-      "unicode": "ec88",
-      "unicode_decimal": 60552
-    },
-    {
-      "icon_id": "6540838",
-      "name": "列表",
-      "font_class": "liebiao",
-      "unicode": "e60a",
-      "unicode_decimal": 58890
-    },
-    {
-      "icon_id": "6909426",
-      "name": "准备量产",
-      "font_class": "zhunbeiliangchan",
-      "unicode": "ecaa",
-      "unicode_decimal": 60586
-    },
-    {
-      "icon_id": "6909428",
-      "name": "设备开发",
-      "font_class": "shebeikaifa",
-      "unicode": "ecac",
-      "unicode_decimal": 60588
     },
     {
       "icon_id": "7008979",

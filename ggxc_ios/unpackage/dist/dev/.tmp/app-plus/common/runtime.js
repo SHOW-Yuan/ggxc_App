@@ -102,11 +102,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/neil-modal/neil-modal":1,"components/wuc-tab/wuc-tab":1,"components/uni-calendar/uni-calendar":1,"components/xfl-select/xfl-select":1,"components/z-table/z-table":1,"components/uni-calendar/uni-calendar-item":1};
+/******/ 		var cssChunks = {"components/neil-modal/neil-modal":1,"components/wuc-tab/wuc-tab":1,"components/uni-calendar/uni-calendar":1,"components/xfl-select/xfl-select":1,"components/uni-calendar/uni-calendar-item":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/neil-modal/neil-modal":"components/neil-modal/neil-modal","components/wuc-tab/wuc-tab":"components/wuc-tab/wuc-tab","components/uni-calendar/uni-calendar":"components/uni-calendar/uni-calendar","components/xfl-select/xfl-select":"components/xfl-select/xfl-select","components/z-table/z-table":"components/z-table/z-table","components/uni-calendar/uni-calendar-item":"components/uni-calendar/uni-calendar-item"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/neil-modal/neil-modal":"components/neil-modal/neil-modal","components/wuc-tab/wuc-tab":"components/wuc-tab/wuc-tab","components/uni-calendar/uni-calendar":"components/uni-calendar/uni-calendar","components/xfl-select/xfl-select":"components/xfl-select/xfl-select","components/uni-calendar/uni-calendar-item":"components/uni-calendar/uni-calendar-item"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

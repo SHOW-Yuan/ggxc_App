@@ -75,11 +75,7 @@
 					method:'post',
 					data:JSON.stringify(this.formInfo),
 					success: (res) => {
-						console.log(res);
 						let { data: { code, datas, msg } } = res;
-						console.log(code);
-						console.log(datas);
-						console.log(msg);
 						if(code!==200){
 							uni.showToast({
 								title: msg,
@@ -100,7 +96,6 @@
 				})
             },
 			// 进行登录跳转
-			
 			loginHome(index, id) {
 			  //存储用户信息
 			  this.userinfo(index);
@@ -113,7 +108,7 @@
 			  }, 500);
 			  if (this.list[0].appcode === 1) {
 			    uni.navigateTo({
-			        url: '/pages/views/rectorHome/statistical/statistical'
+			        url: '/pages/views/coachHome/coachHome'
 			    });
 			  } else if (this.list[0].appcode === 2) {
 			    uni.navigateTo({
