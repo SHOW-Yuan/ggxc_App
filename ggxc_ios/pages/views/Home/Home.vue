@@ -32,7 +32,9 @@
 					<button>我的评价</button>
 				</navigator>
 			</view>
-			<image src="../../../static/images/5_03.png" class="bottomImg" mode=""></image>
+			<navigator url="/pages/views/Home/trainMake/trainMake">
+				<image src="../../../static/images/5_03.png" class="bottomImg" mode=""></image>
+			</navigator>
 			</view>
 			<view  v-else class="tab2" >
 				<view></view>
