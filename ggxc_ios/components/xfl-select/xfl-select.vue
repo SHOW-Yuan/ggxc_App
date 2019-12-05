@@ -31,7 +31,8 @@
 		:style="'top:' + listTop__ + 'px;'" v-show="isShowList">
 			<span class="popper__arrow"></span> <!-- 列表框左上角的空心小三角 -->
 			<scroll-view 
-				class="list" style="background-color: #fff;"
+				class="list" style="background-color: #fff;"  
+				:style="'max-height: ' + listBoxHeight__ +'em;'"
 			    scroll-y=true scroll-x=true
 			>
 				<div 
@@ -836,7 +837,7 @@
 				 border-style: solid;
 				 border-width: 6px;
 				 filter: drop-shadow(0 2px 12px rgba(0,0,0,.03));
-				 left: 40%;
+				 left: 30%;
 				 margin-right: 3px;
 				 border-top-width: 0;
 				 border-bottom-color: #dcdfe6;  
@@ -860,7 +861,7 @@
 				border-radius: 4px;
 				border: 1px solid #dcdfe6; 
 				width: 100%; 
-				// max-height: 10em;
+				max-height: 10em;
 				background-color: #fff;
 				box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 				padding: 5px 0;

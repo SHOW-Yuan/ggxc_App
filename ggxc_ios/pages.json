@@ -1,14 +1,20 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/views/Home/Home",
+			"style": {"navigationStyle":"custom"}
+		},
+		{
 			"path": "pages/views/Login",
 			"style": {"navigationStyle":"custom"}
 		},
-		// 教练区域
 		{
 			"path": "pages/views/coachHome/coachHome",
 			"style": {"navigationStyle":"custom"}
 		},
+		
+		// 教练区域
+		
 		{
 			"path": "pages/views/coachHome/myGrade/myGrade",
 			"style": {
@@ -49,116 +55,15 @@
 				"navigationBarTitleText": "代考审批",
 				"navigationBarBackgroundColor":"#F8F8F8"
 			}
-		},
-		// 校长区域的路由
-		{
-			"path": "pages/views/rectorHome/statistical/statistical",
-			"style": {"navigationStyle":"custom"}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/principalTable/principalTable",
-			"style": {
-				"navigationBarTitleText": "月招生统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/incTable",
-			"style": {
-				"navigationBarTitleText": "收入统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},{
-			"path": "pages/views/rectorHome/statistical/quaTable",
-			"style": {
-				"navigationBarTitleText": "考试合格率统计表",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/needTable",
-			"style": {
-				"navigationBarTitleText": "待考统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/principalTable/detailsTable/detailsTable",
-			"style": {
-				"navigationBarTitleText": "详情统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/referrer",
-			"style": {
-				"navigationBarTitleText": "推荐人统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/rectorHome",
-			"style": {
-				"navigationBarTitleText": "数据快报",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/refuelTable/refuelTable",
-			"style": {
-				"navigationBarTitleText": "加油统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/refuelTable/fuelDetails/fuelDetails",
-			"style": {
-				"navigationBarTitleText": "燃料详情",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/serviceTable",
-			"style": {
-				"navigationBarTitleText": "维修统计",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/fuelAudit",
-			"style": {
-				"navigationBarTitleText": "燃料审核",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/maintainAudit",
-			"style": {
-				"navigationBarTitleText": "维修记录",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
-		},
-		{
-			"path": "pages/views/rectorHome/statistical/examineEvaluate",
-			"style": {
-				"navigationBarTitleText": "查看评价",
-				"navigationBarBackgroundColor":"#04BE9E",
-				"navigationBarTextStyle":"white"
-			}
 		}
-		
+		//学员区域
+		// {
+		// 	"path": "pages/views/Home/Home",
+		// 	"style": {
+		// 		"navigationBarTitleText": "学员信息",
+		// 		"navigationBarBackgroundColor":"#F8F8F8"
+		// 	}
+		// }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

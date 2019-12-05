@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "详情统计",
-  "navigationBarBackgroundColor": "#04BE9E",
-  "navigationBarTextStyle": "white",
-  "usingComponents": {
-    "z-table": "/components/z-table/z-table"
-  }
-}

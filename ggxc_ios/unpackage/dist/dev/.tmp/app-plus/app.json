@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/views/Home/Home",
     "pages/views/Login",
     "pages/views/coachHome/coachHome",
     "pages/views/coachHome/myGrade/myGrade",
@@ -7,21 +8,7 @@
     "pages/views/coachHome/carFuel/reful/reful",
     "pages/views/coachHome/carFuel/carFuel",
     "pages/views/coachHome/carMaintain/service/service",
-    "pages/views/coachHome/examAudit/examAudit",
-    "pages/views/rectorHome/statistical/statistical",
-    "pages/views/rectorHome/statistical/principalTable/principalTable",
-    "pages/views/rectorHome/statistical/incTable",
-    "pages/views/rectorHome/statistical/quaTable",
-    "pages/views/rectorHome/statistical/needTable",
-    "pages/views/rectorHome/statistical/principalTable/detailsTable/detailsTable",
-    "pages/views/rectorHome/statistical/referrer",
-    "pages/views/rectorHome/rectorHome",
-    "pages/views/rectorHome/statistical/refuelTable/refuelTable",
-    "pages/views/rectorHome/statistical/refuelTable/fuelDetails/fuelDetails",
-    "pages/views/rectorHome/statistical/serviceTable",
-    "pages/views/rectorHome/statistical/fuelAudit",
-    "pages/views/rectorHome/statistical/maintainAudit",
-    "pages/views/rectorHome/statistical/examineEvaluate"
+    "pages/views/coachHome/examAudit/examAudit"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -29,13 +16,13 @@
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#FFFFFF"
   },
-  "nvueCompiler": "weex",
+  "nvueCompiler": "uni-app",
   "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
   "appname": "ggxc_Ios1",
-  "compilerVersion": "2.2.2",
+  "compilerVersion": "2.4.2",
   "usingComponents": {}
 }
