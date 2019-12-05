@@ -100,6 +100,7 @@
 				})
             },
 			// 进行登录跳转
+			
 			loginHome(index, id) {
 			  //存储用户信息
 			  this.userinfo(index);
@@ -112,7 +113,7 @@
 			  }, 500);
 			  if (this.list[0].appcode === 1) {
 			    uni.navigateTo({
-			        url: '/pages/views/coachHome/coachHome'
+			        url: '/pages/views/rectorHome/statistical/statistical'
 			    });
 			  } else if (this.list[0].appcode === 2) {
 			    uni.navigateTo({

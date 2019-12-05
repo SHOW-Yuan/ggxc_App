@@ -1,0 +1,9 @@
+
+.my-table {
+	padding: 0 20rpx;
+}
+.title {
+	padding: 20rpx;
+	font-weight: 700;
+}
+

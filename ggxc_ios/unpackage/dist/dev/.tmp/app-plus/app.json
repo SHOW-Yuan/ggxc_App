@@ -1,13 +1,27 @@
 {
   "pages": [
-    "pages/views/coachHome/coachHome",
     "pages/views/Login",
+    "pages/views/coachHome/coachHome",
     "pages/views/coachHome/myGrade/myGrade",
     "pages/views/coachHome/carMaintain/carMaintain",
     "pages/views/coachHome/carFuel/reful/reful",
     "pages/views/coachHome/carFuel/carFuel",
     "pages/views/coachHome/carMaintain/service/service",
-    "pages/views/coachHome/examAudit/examAudit"
+    "pages/views/coachHome/examAudit/examAudit",
+    "pages/views/rectorHome/statistical/statistical",
+    "pages/views/rectorHome/statistical/principalTable/principalTable",
+    "pages/views/rectorHome/statistical/incTable",
+    "pages/views/rectorHome/statistical/quaTable",
+    "pages/views/rectorHome/statistical/needTable",
+    "pages/views/rectorHome/statistical/principalTable/detailsTable/detailsTable",
+    "pages/views/rectorHome/statistical/referrer",
+    "pages/views/rectorHome/rectorHome",
+    "pages/views/rectorHome/statistical/refuelTable/refuelTable",
+    "pages/views/rectorHome/statistical/refuelTable/fuelDetails/fuelDetails",
+    "pages/views/rectorHome/statistical/serviceTable",
+    "pages/views/rectorHome/statistical/fuelAudit",
+    "pages/views/rectorHome/statistical/maintainAudit",
+    "pages/views/rectorHome/statistical/examineEvaluate"
   ],
   "window": {
     "navigationBarTextStyle": "black",
