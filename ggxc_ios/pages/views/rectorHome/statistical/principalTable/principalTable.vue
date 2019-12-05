@@ -9,7 +9,6 @@
 			</view>
 		</view>
 		
-		
 		<!-- 报名统计表 -->
 		<view class="num-table">
 			<view class="num-table-tile">报名统计表：</view>

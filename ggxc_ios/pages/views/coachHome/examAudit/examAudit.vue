@@ -28,7 +28,7 @@
 		<neil-modal
 		    :show="show" 
 		    @close="show = false" 
-		    title="约考审核" 
+		    title="燃料审核" 
 			confirm-text="通过审核"
 			cancel-text="拒绝审核"
 		    :content=text

@@ -28,7 +28,9 @@
 				<h3>皮皮</h3>
 				<h4>21</h4>
 				<p>A1</p>
-				<button>我的评价</button>
+				<navigator url="/pages/views/Home/myEvaluate/myEvaluate">
+					<button>我的评价</button>
+				</navigator>
 			</view>
 			<image src="../../../static/images/5_03.png" class="bottomImg" mode=""></image>
 			</view>
@@ -51,13 +53,16 @@
 			}
 		},
 		methods: {
+			// tab切换
 			tabChange(index){
 				if(index==0){
 					this.bacg=true
 				}else{
 					this.bacg=false
 				}
-			}
+			},
+			// 跳转到我的评价
+			
 		}
 	}
 </script>

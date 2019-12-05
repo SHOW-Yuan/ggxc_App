@@ -1,0 +1,1 @@
+<view class="box"><view class="title">详情统计表</view><view class="my-table"><z-table vue-id="1" tableData="{{baseTableData}}" columns="{{baseColumns}}" stickSide bind:__l="__l"></z-table></view></view>

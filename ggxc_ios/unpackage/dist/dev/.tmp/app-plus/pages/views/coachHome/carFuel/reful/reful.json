@@ -1,7 +1,4 @@
 {
   "navigationBarTitleText": "组件",
-  "usingComponents": {
-    "xfl-select": "/components/xfl-select/xfl-select",
-    "uni-calendar": "/components/uni-calendar/uni-calendar"
-  }
+  "usingComponents": {}
 }

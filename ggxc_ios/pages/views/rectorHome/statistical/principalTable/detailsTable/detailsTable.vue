@@ -8,7 +8,6 @@
 			<z-table :tableData='baseTableData' :columns='baseColumns' stickSide ></z-table>
 		</view>
 		
-		
 	</view>
 </template>
 

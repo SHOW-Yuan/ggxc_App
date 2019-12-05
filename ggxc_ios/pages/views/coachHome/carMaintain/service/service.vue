@@ -41,7 +41,7 @@
 				</view>
 			</view>
 			<view>
-				<text>选择加燃时间</text>
+				<text>选择报修时间</text>
 				<view>
 					<uni-calendar
 					v-model="formData.datas[0].date"

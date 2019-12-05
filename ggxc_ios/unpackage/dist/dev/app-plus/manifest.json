@@ -24,7 +24,7 @@
   },
   "plus": {
     "useragent": {
-      "value": "uni-app",
+      "value": "uni-app appservice",
       "concatenate": true
     },
     "splashscreen": {
@@ -37,8 +37,7 @@
     "launchwebview": {
       "render": "always",
       "id": "1",
-      "kernel": "WKWebview",
-      "uni-app": "auto"
+      "kernel": "WKWebview"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -84,13 +83,10 @@
     },
     "allowsInlineMediaPlayback": true,
     "uni-app": {
-      "compilerVersion": "2.4.2",
+      "compilerVersion": "2.2.2",
       "control": "v8",
-      "nvueCompiler": "uni-app",
-      "renderer": "auto",
-      "nvue": {
-        "flex-direction": "column"
-      }
+      "nvueCompiler": "weex",
+      "renderer": "auto"
     }
   }
 }

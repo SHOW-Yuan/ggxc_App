@@ -22,7 +22,6 @@
 	</view>
 </template>
 
-
 <script>
 	import zTable from "@/components/z-table/my-zTable.vue";
 	export default {

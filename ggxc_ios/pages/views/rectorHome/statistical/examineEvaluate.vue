@@ -32,8 +32,7 @@
 			</block>
 		</view>
 		
-	</vie
-	w>
+	</view>
 </template>
 
 <script>
